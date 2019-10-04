@@ -33,6 +33,6 @@ export class NavigationComponent implements OnInit {
 const routList = [
   {name: "HOME", rout: "home"},
   {name: "SAMPLES", rout: "ngsamples"},
-  {name: "BINDING", rout: "databinding"},
+  {name: "DATA-BINDING", rout: "databinding"},
   {name: "RBAC-LIVE", rout: "rbac"}
 ]
