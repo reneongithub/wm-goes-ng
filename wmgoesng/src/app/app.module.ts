@@ -8,6 +8,9 @@ import { RbacComponent } from './subcomponents/rbac/rbac.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { NgSamplesComponent } from './subcomponents/ng-samples/ng-samples.component';
 import { DatabindingComponent } from './subcomponents/databinding/databinding.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { DatabindingComponent } from './subcomponents/databinding/databinding.co
     RbacComponent,
     ErrorpageComponent,
     NgSamplesComponent,
-    DatabindingComponent
+    DatabindingComponent,
+    HeaderComponent,
+    FooterComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

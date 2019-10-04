@@ -1,0 +1,20 @@
+:host{
+
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: rgb(48, 48, 48);
+
+}
+
+.headerlayout{
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 12px 0px;
+    color: antiquewhite;
+
+}
+
