@@ -11,7 +11,7 @@ export class NgoverviewComponent implements OnInit {
 
   constructor() {
 
-    this.slogan = "angular overview works";
+    this.slogan = "it is time to launch for wmedia";
 
   }
 
