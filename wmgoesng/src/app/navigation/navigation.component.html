@@ -1,24 +1,31 @@
 <div class="navframe">
+        
+        
+        <div *ngFor="let rout of routList; let r = rout" class="navitem" (click)="navTo(rout.rout)"  >
 
-    <div class="navitem">
+                <span>{{rout.name}}</span>
+        </div>
+
+
+    <!-- <div class="navitem">
         
         <span>HOME</span>
     </div>
 
     <div class="navitem">
         
-            <span>HOME</span>
+            <span>SAMPLES</span>
     </div>
 
     <div class="navitem">
         
-            <span>HOME</span>
+            <span>BINDING</span>
     </div>
 
-    <div class="navitem">
+    <div class="navitem" (click)="navTo(routRbac)">
         
-            <span>HOME</span>
-    </div>
+            <span>RBAC</span>
+    </div> -->
 
 
 </div>

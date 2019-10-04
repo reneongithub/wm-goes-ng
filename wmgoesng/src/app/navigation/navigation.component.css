@@ -20,9 +20,19 @@
     height: 50px;
     display: flex;background-color: #26313c;
     margin-bottom: 2px;
-    color: white;
+    color: #c4c4c4;
     align-items: center;
     justify-content: center;
+    font-size: small;
+
+
+}
+.navitem:hover{
+
+
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
 
 
 }
