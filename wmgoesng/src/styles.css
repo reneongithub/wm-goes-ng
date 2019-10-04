@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+html, 
+body {
+    height: 100%;
+}
+
+.rootbox{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.bodybox{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.headbox{
+
+    height: 150px;
+
+}
+
+.contentbox{
+
+    flex-grow: 1;
+
+}
+
+.footbox{
+
+    height: 150px;
+
+}
