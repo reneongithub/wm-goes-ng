@@ -13,8 +13,9 @@
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    padding: 12px 0px;
+    padding: 6px 0px;
     color: antiquewhite;
+    align-items: first baseline;
 
 }
 
