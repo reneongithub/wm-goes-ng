@@ -20,6 +20,7 @@ export class NavigationComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log("entered navigation");
   }
 
 
