@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgoverviewComponent implements OnInit {
 
-  constructor() { }
+  slogan: string;
+
+  constructor() {
+
+    this.slogan = "angular overview works";
+
+  }
 
   ngOnInit() {
   }
