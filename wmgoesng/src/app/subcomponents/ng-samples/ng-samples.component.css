@@ -35,7 +35,7 @@
 mat-sidenav-container{
 
     height: 100%;
-
+    width: 650px;
 }
 
 mat-sidenav, mat-sidenav-content{
