@@ -145,9 +145,12 @@
         <div class="single_it">
             <div style="width: 400px; height: 300px;">
                 <mat-sidenav-container>
+
+                    <!-- here we face the first two way data binding -> [(prop)] banana in the box -->
                     <mat-sidenav mode="side" [(opened)]="sidebarIsOpen">Sidenav</mat-sidenav>
+
                     <mat-sidenav-content>navigated content
-                        <button (click)="sidebarIsOpen=!sidebarIsOpen">toggle sidebare</button>
+                        <button mat-raised-button (click)="sidebarIsOpen=!sidebarIsOpen">toggle sidebare</button>
                     </mat-sidenav-content>
     
                 </mat-sidenav-container>
