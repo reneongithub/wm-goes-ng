@@ -1,1 +1,99 @@
-<p>{{slogan}}</p>
+<!-- buttons -->
+<div class="smp_sect">
+
+    <div class="smp_subsect_hor">
+
+        <div class="single_it"><button mat-button>default</button></div>
+        <div class="single_it"><button mat-raised-button>raised</button></div>
+        <div class="single_it"><button mat-flat-button>default</button></div>
+        <div class="single_it"> <button mat-strked-button>default</button></div>
+
+    </div>
+
+    <div class="smp_subsect_hor">
+
+        <div class="single_it"><button mat-icon-button>icon</button></div>
+        <div class="single_it"><button mat-fab>fab</button></div>
+        <div class="single_it"><button mat-mini-fab>min-f</button></div>
+
+    </div>
+
+    <div class="smp_subsect_hor">
+
+        <div class="single_it"><button color="primary" mat-button>color primary</button></div>
+        <div class="single_it"><button color="accent" mat-button>color accent</button></div>
+        <div class="single_it"><button color="warn" mat-button>color warn</button></div>
+        <div class="single_it"><button color="primary" mat-raised-button>color primary</button></div>
+        <div class="single_it"><button color="accent" mat-raised-button>color accent</button></div>
+        <div class="single_it"><button color="warn" mat-raised-button>color warn</button></div>
+
+    </div>
+
+    <div class="smp_subsect_hor">
+
+        <div class="single_it"><mat-button-toggle #toggleBtn>toggle me</mat-button-toggle></div>
+        <div class="single_it">{{toggleBtn.checked}}</div>
+
+        <div class="single_it"><mat-button-toggle-group #toggleGrpA="matButtonToggleGroup">
+
+            <mat-button-toggle value="A">one</mat-button-toggle>
+            <mat-button-toggle value="B">two</mat-button-toggle>
+            <mat-button-toggle value="C">three</mat-button-toggle>
+
+        </mat-button-toggle-group></div>
+
+        <div class="single_it">selected one: {{toggleGrpA.value}}</div>
+
+        <div class="single_it"><mat-button-toggle-group #toggleGrpB="matButtonToggleGroup" multiple>
+
+            <mat-button-toggle value="A">one</mat-button-toggle>
+            <mat-button-toggle value="B">two</mat-button-toggle>
+            <mat-button-toggle value="C">three</mat-button-toggle>
+
+        </mat-button-toggle-group></div>
+        <div class="single_it">selected multiple: {{toggleGrpB.value}}</div>
+    </div>
+
+
+</div>
+
+
+<!-- icons -->
+<div class="smp_sect">
+
+        <div class="smp_subsect_hor">
+            <div class="single_it"><mat-icon color="primary">grade</mat-icon></div>
+            <div class="single_it"><mat-icon color="accent">grade</mat-icon></div>
+            <div class="single_it"><mat-icon color="warn">grade</mat-icon></div>
+
+        </div>
+
+
+</div>
+
+
+<!-- badges -->
+<div class="smp_sect">
+
+        <div class="smp_subsect_hor">
+            <div class="single_it"><span matBadge="1" >Notificaton</span></div>
+            <div class="single_it"><span matBadge="2" matBadgePosition="below before">Notificaton</span></div>
+            <div class="single_it"><span matBadge="3" matBadgePosition="below after">Notificaton</span></div>
+            <div class="single_it"><span matBadge="4" matBadgePosition="above before">Notificaton</span></div>
+
+        </div>
+        <div class="smp_subsect_hor">
+            <div class="single_it"><span matBadge="p" matBadgeColor="primary" matBadgeOverlap="false">Notificaton</span></div>
+            <div class="single_it"><span matBadge="a" matBadgeColor="accent" matBadgePosition="below before" matBadgeOverlap="false">Notificaton</span></div>
+            <div class="single_it"><span matBadge="w" matBadgeColor="warn" matBadgePosition="below after" matBadgeOverlap="false">Notificaton</span></div>
+            
+        </div>
+        <div class="smp_subsect_hor">
+            <div class="single_it"><span matBadge="s" matBadgeSize="small" matBadgeOverlap="false">Notificaton</span></div>
+            <div class="single_it"><span matBadge="m" matBadgeSize="medium" matBadgeOverlap="false">Notificaton</span></div>
+            <div class="single_it"><span matBadge="l" matBadgeSize="large" matBadgeOverlap="false">Notificaton</span></div>
+            
+        </div>
+
+
+</div>

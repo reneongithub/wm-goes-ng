@@ -11,7 +11,7 @@ export class NgSamplesComponent implements OnInit {
 
   constructor() {
 
-    this.slogan = "angular samples works";
+    this.slogan = "angular samples work";
 
   }
 
