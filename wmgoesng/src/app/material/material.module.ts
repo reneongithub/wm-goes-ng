@@ -3,16 +3,22 @@ import {
   MatButtonModule,
   MatButtonToggleModule,
   MatIconModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatToolbarModule,
+  MatSidenavModule
 } from '@angular/material';
 import { MatBadgeModule } from '@angular/material/badge';
+import { FormsModule } from '@angular/forms';
 
 const MaterialComponents = [
   MatButtonModule,
   MatButtonToggleModule,
   MatIconModule,
   MatBadgeModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatToolbarModule,
+  MatSidenavModule,
+  FormsModule
 ];
 
 @NgModule({

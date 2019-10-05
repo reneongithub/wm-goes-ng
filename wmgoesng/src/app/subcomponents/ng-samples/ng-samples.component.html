@@ -124,7 +124,36 @@
                 <div class="single_it"><mat-spinner *ngIf="spinnOn"></mat-spinner></div>
         </div>
 
+</div>
+
+<!-- navigation toolbar -->
+
+<div class="smp_sect">
+
+        <div class="single_it">
+            <mat-toolbar color="primary" class="navbar">
+                <div>NAV ME</div>
+                <div>
+                    <span>Home</span>
+                    <span>About</span>
+                    <span>Links</span>
+                </div>
+            </mat-toolbar>
+        </div>
 
 
+        <div class="single_it">
+            <div style="width: 400px; height: 300px;">
+                <mat-sidenav-container>
+                    <mat-sidenav mode="side" [(opened)]="sidebarIsOpen">Sidenav</mat-sidenav>
+                    <mat-sidenav-content>main
+                        <button (click)="sidebarIsOpen=!sidebarIsOpen">toggle sidebare</button>
+                    </mat-sidenav-content>
+    
+                </mat-sidenav-container>
+            </div>
+        </div>
 
 </div>
+
+

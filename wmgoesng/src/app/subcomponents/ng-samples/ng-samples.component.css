@@ -20,3 +20,33 @@
 .single_it{
     margin: 10px 30px;
 }
+
+
+
+/* navigation */
+
+.navbar{
+    justify-content: space-between;
+}
+.navbar span{
+    padding-right: 1rem;
+}
+
+mat-sidenav-container{
+
+    height: 100%;
+
+}
+
+mat-sidenav, mat-sidenav-content{
+
+    padding: 16px;
+
+}
+
+mat-sidenav{
+
+    background-color: #ccd9ca;
+    width: 200px;
+
+}

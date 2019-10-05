@@ -11,11 +11,15 @@ export class NgSamplesComponent implements OnInit {
 
   spinnOn: boolean;
 
+  sidebarIsOpen: boolean;
+
   constructor() {
 
     this.slogan = "angular samples work";
 
     this.spinnOn = false;
+
+    this.sidebarIsOpen = false;
 
   }
 
