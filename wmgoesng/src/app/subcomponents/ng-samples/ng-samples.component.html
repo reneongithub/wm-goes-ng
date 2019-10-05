@@ -5,8 +5,8 @@
 
         <div class="single_it"><button mat-button>default</button></div>
         <div class="single_it"><button mat-raised-button>raised</button></div>
-        <div class="single_it"><button mat-flat-button>default</button></div>
-        <div class="single_it"> <button mat-strked-button>default</button></div>
+        <div class="single_it"><button mat-flat-button>flat</button></div>
+        <div class="single_it"> <button mat-stroked-button>stroked</button></div>
 
     </div>
 
@@ -94,6 +94,37 @@
             <div class="single_it"><span matBadge="l" matBadgeSize="large" matBadgeOverlap="false">Notificaton</span></div>
             
         </div>
+
+
+</div>
+
+<!-- progress indication -->
+<div class="smp_sect">
+
+        <div class="smp_subsect_hor">
+
+            <div class="single_it">
+                <mat-progress-spinner value="25"></mat-progress-spinner>progress mode 25%
+            </div>
+            <div class="single_it">
+                <mat-progress-spinner value="50"></mat-progress-spinner>progress mode 50%
+            </div>
+            <div class="single_it">
+                <mat-progress-spinner value="75"></mat-progress-spinner>progress mode 75%
+            </div>
+            <div class="single_it">
+                <mat-progress-spinner value="100"></mat-progress-spinner>progress mode 100%
+            </div>
+
+        </div>
+
+
+        <div class="smp_subsect_hor">
+                <div class="single_it"><button mat-raised-button (click)="letSpinnerRunForAWhile()">let it spinn for a while</button></div>
+                <div class="single_it"><mat-spinner *ngIf="spinnOn"></mat-spinner></div>
+        </div>
+
+
 
 
 </div>
