@@ -7,23 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgSamplesComponent implements OnInit {
 
-  slogan: string;
-
   spinnOn: boolean;
 
   sidebarIsOpen: boolean;
 
   constructor() {
-
-    this.slogan = "angular samples work";
-
-    this.spinnOn = false;
-
-    this.sidebarIsOpen = false;
-
+    //
   }
 
   ngOnInit() {
+
+    this.spinnOn = false;
+
+    this.sidebarIsOpen = true;
   }
 
 
@@ -31,10 +27,10 @@ export class NgSamplesComponent implements OnInit {
   // component controls
 
   letSpinnerRunForAWhile(){
+
     this.spinnOn = true;
-    setTimeout(() => {
-      this.spinnOn = false;
-    }, 5000);
+
+    setTimeout( () => { this.spinnOn = false }, 5000);
   }
 
 }

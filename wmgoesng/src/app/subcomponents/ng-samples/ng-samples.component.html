@@ -174,11 +174,33 @@
     </div>
 </div>
 
-<!-- ?? -->
+
+<!-- menu -->
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">??</h5>
-        
+        <h5 class="card-title">Menu</h5>
+
+
+        <div class="single_it">
+
+            <mat-menu #appMenu="matMenu" xPosition="after" yPosition="below">
+                <ng-template matMenuContent let-name="name">
+                    <button mat-menu-item>item one</button>
+                    <button mat-menu-item>item two</button>
+                    <button mat-menu-item [matMenuTriggerFor]="subMenu">item three</button>
+
+                </ng-template>
+            </mat-menu>
+
+            <button mat-flat-button [matMenuTriggerFor]="appMenu">Menu One</button>
+            
+            <mat-menu #subMenu="matMenu">
+                <button mat-menu-item>sub one</button>
+                <button mat-menu-item>sub two</button>
+                <button mat-menu-item>sub three</button>
+            </mat-menu>
+
+        </div>
         
     </div>
 </div>
@@ -191,6 +213,7 @@
         
     </div>
 </div>
+
 
 <!-- ?? -->
 <div class="card">
