@@ -50,3 +50,9 @@ mat-sidenav{
     width: 200px;
 
 }
+
+/* override some bootstarp rools for card */
+.card{
+    background-color: #f2f0ff;
+    margin: 10px 10px;
+}
