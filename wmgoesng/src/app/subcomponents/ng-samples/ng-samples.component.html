@@ -195,10 +195,30 @@
             <button mat-flat-button [matMenuTriggerFor]="appMenu">Menu One</button>
             
             <mat-menu #subMenu="matMenu">
-                <button mat-menu-item>sub one</button>
-                <button mat-menu-item>sub two</button>
-                <button mat-menu-item>sub three</button>
+                
+                <ng-template matMenuContent let-name="name">
+                    <button mat-menu-item>sub one</button>
+                    <button mat-menu-item>sub two</button>
+                    <button mat-menu-item>sub three</button>
+                    <button mat-menu-item>{{name}}</button>
+                </ng-template>
             </mat-menu>
+
+            <button
+                mat-raised-button
+                [matMenuTriggerFor]=subMenu
+                [matMenuTriggerData]="{name:'dnynamic AA'}"
+            >
+            dyn one
+            </button>
+
+            <button
+                mat-raised-button
+                [matMenuTriggerFor]=subMenu
+                [matMenuTriggerData]="{name:'dnynamic BB'}"
+            >
+            dyn two
+            </button>
 
         </div>
         
