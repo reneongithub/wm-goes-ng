@@ -6,7 +6,9 @@ import {
   MatProgressSpinnerModule,
   MatToolbarModule,
   MatSidenavModule,
-  MatMenuModule
+  MatMenuModule,
+  MatListModule,
+  MatDividerModule
 } from '@angular/material';
 import { MatBadgeModule } from '@angular/material/badge';
 import { FormsModule } from '@angular/forms';
@@ -20,7 +22,9 @@ const MaterialComponents = [
   MatToolbarModule,
   MatSidenavModule,
   FormsModule,
-  MatMenuModule
+  MatMenuModule,
+  MatListModule,
+  MatDividerModule
 ];
 
 @NgModule({

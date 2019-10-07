@@ -144,31 +144,35 @@
 <div class="card">
     <div class="card-body">
         <h5 class="card-title">Navigation Bars</h5>
+
+
+        <div class="smp_subsect_hor">
         
-        <div class="single_it">
-            <mat-toolbar color="primary" class="navbar">
-                <div>NAV ME</div>
-                <div>
-                    <span>Home</span>
-                    <span>About</span>
-                    <span>Links</span>
+            <div class="single_it">
+                <mat-toolbar color="primary" class="navbar">
+                    <div>NAV ME</div>
+                    <div>
+                        <span>Home</span>
+                        <span>About</span>
+                        <span>Links</span>
+                    </div>
+                </mat-toolbar>
+            </div>
+
+
+            <div class="single_it">
+                <div style="width: 400px; height: 300px;">
+                    <mat-sidenav-container>
+
+                        <!-- here we face the first two way data binding -> [(prop)] banana in the box -->
+                        <mat-sidenav mode="side" [(opened)]="sidebarIsOpen">Sidenav</mat-sidenav>
+
+                        <mat-sidenav-content>navigated content
+                            <button mat-raised-button (click)="sidebarIsOpen=!sidebarIsOpen">toggle sidebare</button>
+                        </mat-sidenav-content>
+        
+                    </mat-sidenav-container>
                 </div>
-            </mat-toolbar>
-        </div>
-
-
-        <div class="single_it">
-            <div style="width: 400px; height: 300px;">
-                <mat-sidenav-container>
-
-                    <!-- here we face the first two way data binding -> [(prop)] banana in the box -->
-                    <mat-sidenav mode="side" [(opened)]="sidebarIsOpen">Sidenav</mat-sidenav>
-
-                    <mat-sidenav-content>navigated content
-                        <button mat-raised-button (click)="sidebarIsOpen=!sidebarIsOpen">toggle sidebare</button>
-                    </mat-sidenav-content>
-    
-                </mat-sidenav-container>
             </div>
         </div>
     </div>
@@ -180,50 +184,102 @@
     <div class="card-body">
         <h5 class="card-title">Menu</h5>
 
+        <div class="smp_subsect_hor">
 
-        <div class="single_it">
+            <div class="single_it">
 
-            <mat-menu #appMenu="matMenu" xPosition="after" yPosition="below">
-                <ng-template matMenuContent let-name="name">
-                    <button mat-menu-item>item one</button>
-                    <button mat-menu-item>item two</button>
-                    <button mat-menu-item [matMenuTriggerFor]="subMenu">item three</button>
+                <mat-menu #appMenu="matMenu" xPosition="after" yPosition="below">
+                    <ng-template matMenuContent let-name="name">
+                        <button mat-menu-item>item one</button>
+                        <button mat-menu-item>item two</button>
+                        <button mat-menu-item [matMenuTriggerFor]="subMenu">item three</button>
 
-                </ng-template>
-            </mat-menu>
+                    </ng-template>
+                </mat-menu>
 
-            <button mat-flat-button [matMenuTriggerFor]="appMenu">Menu One</button>
-            
-            <mat-menu #subMenu="matMenu">
+                <button mat-flat-button [matMenuTriggerFor]="appMenu">Menu One</button>
                 
-                <ng-template matMenuContent let-name="name">
-                    <button mat-menu-item>sub one</button>
-                    <button mat-menu-item>sub two</button>
-                    <button mat-menu-item>sub three</button>
-                    <button mat-menu-item>{{name}}</button>
-                </ng-template>
-            </mat-menu>
+                <mat-menu #subMenu="matMenu">
+                    
+                    <ng-template matMenuContent let-name="name">
+                        <button mat-menu-item>sub one</button>
+                        <button mat-menu-item>sub two</button>
+                        <button mat-menu-item>sub three</button>
+                        <button mat-menu-item>{{name}}</button>
+                    </ng-template>
+                </mat-menu>
 
-            <button
-                mat-raised-button
-                [matMenuTriggerFor]=subMenu
-                [matMenuTriggerData]="{name:'dnynamic AA'}"
-            >
-            dyn one
-            </button>
+                <button
+                    mat-raised-button
+                    [matMenuTriggerFor]=subMenu
+                    [matMenuTriggerData]="{name:'dnynamic AA'}"
+                >
+                dyn one
+                </button>
 
-            <button
-                mat-raised-button
-                [matMenuTriggerFor]=subMenu
-                [matMenuTriggerData]="{name:'dnynamic BB'}"
-            >
-            dyn two
-            </button>
+                <button
+                    mat-raised-button
+                    [matMenuTriggerFor]=subMenu
+                    [matMenuTriggerData]="{name:'dnynamic BB'}"
+                >
+                dyn two
+                </button>
+
+            </div>
 
         </div>
         
     </div>
 </div>
+
+<!-- list -->
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Lists</h5>
+        
+
+
+        <div class="smp_subsect_hor">
+            <mat-list dense>
+                <mat-list-item>Item 1</mat-list-item>
+                <mat-list-item>Item 2</mat-list-item>
+                <mat-list-item>Item 3</mat-list-item>
+            </mat-list>
+        </div>
+
+        <div class="smp_subsect_hor">
+            <mat-nav-list>
+                <a mat-list-item href="#">Item 1</a>
+                <a mat-list-item href="#">Item 2</a>
+                <a mat-list-item href="#">Item 3</a>
+            </mat-nav-list>
+        </div>
+
+        <div>
+            <mat-list>
+                <mat-list-item>
+                    <mat-icon matListIcon>home</mat-icon>
+                    <h3 matLine>heading 1</h3>
+                    <p matLine>line 1</p>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    <mat-icon matListIcon>folder</mat-icon>
+                    <h3 matLine>heading 2</h3>
+                    <p matLine>line 2</p>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    <mat-icon matListIcon>android</mat-icon>
+                    <h3 matLine>heading 3</h3>
+                    <p matLine>line 3</p>
+                </mat-list-item>
+            </mat-list>
+        </div>
+        
+    </div>
+</div>
+
 
 <!-- ?? -->
 <div class="card">
