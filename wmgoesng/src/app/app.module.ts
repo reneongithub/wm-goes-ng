@@ -15,6 +15,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { MatNativeDateModule } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RbacService } from './services/rbac.service';
+
+
 
 @NgModule({
   declarations: [
@@ -37,7 +40,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   providers: [
-    
+    RbacService
   ],
   bootstrap: [AppComponent]
 })

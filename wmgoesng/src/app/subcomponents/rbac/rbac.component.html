@@ -1,1 +1,32 @@
-<p>{{slogan}}</p>
+
+<!-- input fields -->
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Login to Rbac Service with valid credentials</h5>
+
+
+
+        <div class="smp_subsect_hor">
+            <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
+                <mat-label>user name</mat-label>
+                <input required matInput >
+                <mat-hint align="end">min 5 characters</mat-hint>
+            </mat-form-field>
+        </div>
+
+
+        <div class="smp_subsect_hor">
+            <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
+                <mat-label>password</mat-label>
+                <input required matInput>
+                <mat-hint align="end">min 5 characters</mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="smp_subsect_hor">
+            <div class="single_it">
+                <button mat-raised-button>login</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
