@@ -8,9 +8,20 @@ import {
   MatSidenavModule,
   MatMenuModule,
   MatListModule,
-  MatDividerModule
+  MatDividerModule,
+  MatGridListModule,
+  MatExpansionModule,
+  MatStepperModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatTabsModule,
+  MatCheckboxModule,
+  MatRadioModule,
+  MatOptionModule,
+  MatSelectModule
 } from '@angular/material';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FormsModule } from '@angular/forms';
 
 const MaterialComponents = [
@@ -24,7 +35,18 @@ const MaterialComponents = [
   FormsModule,
   MatMenuModule,
   MatListModule,
-  MatDividerModule
+  MatDividerModule,
+  MatGridListModule,
+  MatExpansionModule,
+  MatStepperModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatTabsModule,
+  MatDatepickerModule,
+  MatCheckboxModule,
+  MatRadioModule,
+  MatOptionModule,
+  MatSelectModule
 ];
 
 @NgModule({

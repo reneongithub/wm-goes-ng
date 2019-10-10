@@ -281,21 +281,241 @@
 </div>
 
 
-<!-- ?? -->
+<!-- Grids -->
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">??</h5>
+        <h5 class="card-title">Grids</h5>
+
+        <mat-grid-list cols="3" rowHeight="2:1" gutterSize="4px">
+            <mat-grid-tile>tile 1</mat-grid-tile>
+            <mat-grid-tile>tile 2</mat-grid-tile>
+            <mat-grid-tile>tile 3</mat-grid-tile>
+
+            <mat-grid-tile>tile 4</mat-grid-tile>
+            <mat-grid-tile>tile 5</mat-grid-tile>
+            <mat-grid-tile>tile 6</mat-grid-tile>
+
+            <mat-grid-tile>tile 7</mat-grid-tile>
+            <mat-grid-tile colspan="2">tile 8</mat-grid-tile>
+        </mat-grid-list>
         
         
     </div>
 </div>
 
 
-<!-- ?? -->
+
+<!-- Panel in Accordion -->
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">??</h5>
+        <h5 class="card-title">Panels in Accordion</h5>
+
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Panel 1
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        first panel contained in an accordion container
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>here you can place anything you want as panel content</p>
+                <mat-action-row>
+                    <button mat-button>enroll</button>
+                </mat-action-row>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Panel 2
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        second panel contained in an accordion container
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>here you can place anything you want as panel content</p>
+                <mat-action-row>
+                    <button mat-button>enroll</button>
+                </mat-action-row>
+            </mat-expansion-panel>
+        </mat-accordion>
+        
+    </div>
+</div>
+
+
+
+<!-- input fields -->
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Input Fields</h5>
+
+
+        <div class="smp_subsect_hor">
+            <mat-form-field floatLabel="auto" hideRequiredMarker appearance="legacy">
+                <mat-label>someText</mat-label>
+                <input required matInput>
+                <mat-hint align="end">min 5 characters</mat-hint>
+            </mat-form-field>
+        </div>
+
+
+        <div class="smp_subsect_hor">
+            <mat-form-field floatLabel="left" hideRequiredMarker appearance="standard">
+                <mat-label>someText</mat-label>
+                <input required matInput>
+                <mat-hint align="end">min 5 characters</mat-hint>
+            </mat-form-field>
+        </div>
+
+
+        <div class="smp_subsect_hor">
+            <mat-form-field floatLabel="auto" hideRequiredMarker appearance="fill">
+                <mat-label>someText</mat-label>
+                <input required matInput>
+                <mat-hint align="end">min 5 characters</mat-hint>
+            </mat-form-field>
+        </div>
+
+
+        <div class="smp_subsect_hor">
+            <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
+                <mat-label>someText</mat-label>
+                <input required matInput>
+                <mat-hint align="end">min 5 characters</mat-hint>
+            </mat-form-field>
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+<!-- input tryout -->
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Input Fields Setup</h5>
+
+        <div class="example-container">
+                <form class="example-container" [formGroup]="options">
+                  <mat-checkbox formControlName="hideRequired">Hide required marker</mat-checkbox>
+                  <div>
+                    <label>Float label: </label>
+                    <mat-radio-group formControlName="floatLabel">
+                      <mat-radio-button value="auto">Auto</mat-radio-button>
+                      <mat-radio-button value="always">Always</mat-radio-button>
+                      <mat-radio-button value="never">Never</mat-radio-button>
+                    </mat-radio-group>
+                  </div>
+                </form>
+              
+                <mat-form-field
+                    [hideRequiredMarker]="options.value.hideRequired"
+                    [floatLabel]="options.value.floatLabel">
+                  <input matInput placeholder="Simple placeholder" required>
+                </mat-form-field>
+              
+                <mat-form-field [floatLabel]="options.value.floatLabel">
+                  <mat-label>Both a label and a placeholder</mat-label>
+                  <input matInput placeholder="Simple placeholder">
+                </mat-form-field>
+              
+                <mat-form-field
+                    [hideRequiredMarker]="options.value.hideRequired"
+                    [floatLabel]="options.value.floatLabel">
+                  <mat-select required>
+                    <mat-option>-- None --</mat-option>
+                    <mat-option value="option">Option</mat-option>
+                  </mat-select>
+                  <mat-label><mat-icon>favorite</mat-icon> <b> Fancy</b> <i> label</i></mat-label>
+                </mat-form-field>
+              </div>
+              
+        
+    </div>
+</div>
+
+
+<!-- tabs -->
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Tab Group</h5>
+
+        <mat-tab-group>
+            <mat-tab label="First"> Content 1 </mat-tab>
+            <mat-tab label="Second"> Content 2 </mat-tab>
+            <mat-tab label="Third"> Content 3 </mat-tab>
+        </mat-tab-group>
+
+        
+    </div>
+</div>
+
+
+<!-- stepper -->
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Process Stepper</h5>
+
+        <mat-horizontal-stepper linear>
+
+            <mat-step label="first step" completed=true>
+                <p>maby a person data form</p>
+                <div>
+                    <button mat-button matStepperNext>Done</button>
+                </div>
+            </mat-step>
+
+            <mat-step label="second step" completed=true>
+                <p>maby an address form</p>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Done</button>
+                </div>
+            </mat-step>
+
+            <mat-step label="final step" completed=true>
+                <p>maby a summary to finalalize your process</p>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                </div>
+            </mat-step>
+
+        </mat-horizontal-stepper>
         
         
     </div>
 </div>
+
+
+
+<!-- datepicker -->
+<div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Date Picking</h5>
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker1" placeholder="Angular forms" [formControl]="date">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+                  
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker2" placeholder="Angular forms (w/ deserialization)"
+                    [formControl]="serializedDate">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+                  
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker3" placeholder="Value binding" [value]="date.value">
+                <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                <mat-datepicker #picker3></mat-datepicker>
+            </mat-form-field>
+                  
+            
+            
+        </div>
+    </div>

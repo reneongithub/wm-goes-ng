@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-ng-samples',
@@ -11,8 +12,18 @@ export class NgSamplesComponent implements OnInit {
 
   sidebarIsOpen: boolean;
 
-  constructor() {
-    //
+  // form inputs setup
+  options: FormGroup;
+
+  // datepicker
+  date = new FormControl(new Date());
+  serializedDate = new FormControl((new Date()).toISOString());
+
+  constructor(fb: FormBuilder) {
+    this.options = fb.group({
+      hideRequired: false,
+      floatLabel: 'auto',
+    });
   }
 
   ngOnInit() {
@@ -32,5 +43,6 @@ export class NgSamplesComponent implements OnInit {
 
     setTimeout( () => { this.spinnOn = false }, 5000);
   }
+
 
 }
