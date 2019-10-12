@@ -1,11 +1,9 @@
-
-<!-- input fields -->
 <div class="card">
     <div class="card-body">
         <h5 class="card-title">Login to Rbac Service with valid credentials</h5>
 
 
-
+        <!-- inpit for username -->
         <div class="smp_subsect_hor">
             <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
                 <mat-label>user name</mat-label>
@@ -14,7 +12,7 @@
             </mat-form-field>
         </div>
 
-
+        <!-- input for password -->
         <div class="smp_subsect_hor">
             <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
                 <mat-label>password</mat-label>
@@ -22,11 +20,22 @@
                 <mat-hint align="end">min 5 characters</mat-hint>
             </mat-form-field>
         </div>
+
+        <!-- button for login function -->
         <div class="smp_subsect_hor">
             <div class="single_it">
                 <button mat-raised-button (click)="login()">login</button>
             </div>
         </div>
+        
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Here you are..</h5>
+
+        <!-- output token or fail msg -->
         <div class="smp_subsect_hor">
             <div class="single_it">
                 <div>{{rspMsg}}</div>
@@ -34,6 +43,7 @@
         </div>
 
 
+        <!-- show login response in a panel -->
         <mat-expansion-panel>
             <mat-expansion-panel-header>
                 <mat-panel-title>
@@ -43,8 +53,13 @@
                     here we display the whole returned object from angular rbac service
                 </mat-panel-description>
             </mat-expansion-panel-header>
+
             {{loginRsp | json}}
+
         </mat-expansion-panel>
+
+
+        <!-- next element............. -->
         
     </div>
 </div>
