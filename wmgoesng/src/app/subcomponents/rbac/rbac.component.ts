@@ -18,11 +18,12 @@ export class RbacComponent implements OnInit {
 
   rspMsg: string;
 
+  loginRsp: Result;
+
 
   constructor(serv: RbacService) {
 
     this.serv = serv;
-    console.log(serv);
 
   }
 
@@ -36,16 +37,31 @@ export class RbacComponent implements OnInit {
 
     this.rspMsg = "no token available";
 
+
+
   }
 
   login(){
-    this.serv.login( this.userName , this.password, (result: any) => this.onLogin(result) );
+    this.serv.login( this.userName , this.password, (result: Result) => this.onLogin(result) );
   }
 
 
-  onLogin(result: any){
-    this.rspMsg = "login failed";
+  onLogin(result: Result){
+
+    this.loginRsp = result;
+
     console.log(result);
+
+    if(result.hasError){
+      this.rspMsg = "login failed"
+      return;
+    };
+
+    let obj: any = result.object;
+
+    this.rspMsg = obj['token'];
+
+
   }
 
 }

@@ -18,7 +18,7 @@
         <div class="smp_subsect_hor">
             <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
                 <mat-label>password</mat-label>
-                <input required matInput [(ngModel)]="password">
+                <input type="password" required matInput [(ngModel)]="password" >
                 <mat-hint align="end">min 5 characters</mat-hint>
             </mat-form-field>
         </div>
@@ -32,6 +32,15 @@
                 <div>{{rspMsg}}</div>
             </div>
         </div>
+        
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Plain response on succeeded request</h5>
+
+        {{loginRsp | json}}
         
     </div>
 </div>

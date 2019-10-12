@@ -16,6 +16,7 @@ import { MaterialModule } from './material/material.module';
 import { MatNativeDateModule } from '@angular/material';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RbacService } from './services/rbac.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -38,7 +39,8 @@ import { RbacService } from './services/rbac.service';
     MaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     RbacService
