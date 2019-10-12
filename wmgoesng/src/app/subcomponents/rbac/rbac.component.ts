@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RbacService } from 'src/app/services/rbac.service';
+import { Result } from 'src/app/services/service.result.model';
 
 @Component({
   selector: 'app-rbac',
@@ -13,6 +14,9 @@ export class RbacComponent implements OnInit {
 
   userName: string;
   password: string;
+  token: string;
+
+  rspMsg: string;
 
 
   constructor(serv: RbacService) {
@@ -20,19 +24,27 @@ export class RbacComponent implements OnInit {
     this.serv = serv;
     console.log(serv);
 
-    this.slogan = "rbac works";
-
   }
 
   
 
   ngOnInit() {
-    // test service
-    this.serv.login( "user" , "pass", (result: any) => this.onLogin(result) );
+
+    this.userName = "";
+    this.password = "";
+    this.token = null;
+
+    this.rspMsg = "no token available";
+
+  }
+
+  login(){
+    this.serv.login( this.userName , this.password, (result: any) => this.onLogin(result) );
   }
 
 
   onLogin(result: any){
+    this.rspMsg = "login failed";
     console.log(result);
   }
 

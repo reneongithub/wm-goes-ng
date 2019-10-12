@@ -9,7 +9,7 @@
         <div class="smp_subsect_hor">
             <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
                 <mat-label>user name</mat-label>
-                <input required matInput >
+                <input required matInput [(ngModel)]="userName">
                 <mat-hint align="end">min 5 characters</mat-hint>
             </mat-form-field>
         </div>
@@ -18,13 +18,18 @@
         <div class="smp_subsect_hor">
             <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
                 <mat-label>password</mat-label>
-                <input required matInput>
+                <input required matInput [(ngModel)]="password">
                 <mat-hint align="end">min 5 characters</mat-hint>
             </mat-form-field>
         </div>
         <div class="smp_subsect_hor">
             <div class="single_it">
-                <button mat-raised-button>login</button>
+                <button mat-raised-button (click)="login()">login</button>
+            </div>
+        </div>
+        <div class="smp_subsect_hor">
+            <div class="single_it">
+                <div>{{rspMsg}}</div>
             </div>
         </div>
         
