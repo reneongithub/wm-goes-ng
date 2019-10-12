@@ -32,15 +32,19 @@
                 <div>{{rspMsg}}</div>
             </div>
         </div>
-        
-    </div>
-</div>
 
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title">Plain response on succeeded request</h5>
 
-        {{loginRsp | json}}
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Plain response
+                </mat-panel-title>
+                <mat-panel-description>
+                    here we display the whole returned object from angular rbac service
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            {{loginRsp | json}}
+        </mat-expansion-panel>
         
     </div>
 </div>
