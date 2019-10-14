@@ -21,11 +21,13 @@ import {
   MatSelectModule,
   MatTableModule,
   MatPaginatorModule,
-  MatSortModule
+  MatSortModule,
+  MatBottomSheetModule
 } from '@angular/material';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FormsModule } from '@angular/forms';
+import { BottomSheetOverviewExampleSheet } from '../personform/personform.component';
 
 const MaterialComponents = [
   MatButtonModule,
@@ -52,11 +54,17 @@ const MaterialComponents = [
   MatSelectModule,
   MatTableModule,
   MatPaginatorModule,
-  MatSortModule
+  MatSortModule,
+  MatBottomSheetModule
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    BottomSheetOverviewExampleSheet
+  ],
+  entryComponents: [
+    BottomSheetOverviewExampleSheet
+  ],
   imports: [MaterialComponents],
   exports: [MaterialComponents]
 })
