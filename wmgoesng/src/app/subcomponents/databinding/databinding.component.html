@@ -1,1 +1,43 @@
-<p>{{slogan}}</p>
+<!-- person form -->
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Here we call a new person form component instance</h5>
+
+        <app-personform [person]="person"></app-personform>
+
+        
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">This is no part of person form component. It's just two way data binding</h5>
+
+        
+        <div class="smp_subsect_hor">
+            <p>first name: </p>{{person.firstName}}
+        </div>
+
+        <div class="smp_subsect_hor">
+            <p>last name: </p>{{person.lastName}}
+        </div>
+
+
+        <div class="smp_subsect_hor">
+            <p>city: </p>{{person.city}}
+        </div>
+
+        <div class="smp_subsect_hor">
+            <p>street: </p>{{person.street}}
+        </div>
+
+        <div class="smp_subsect_hor">
+            <p>pohne: </p>{{person.phone}}
+        </div>
+
+        
+    </div>
+</div>
+
+

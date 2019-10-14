@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Person } from 'src/app/services/person.model';
 
 @Component({
   selector: 'app-databinding',
@@ -7,12 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatabindingComponent implements OnInit {
 
-  slogan: string;
+  person: Person;
 
   constructor() {
 
-    this.slogan = "data binding works";
+    this.initPerson();
 
+  }
+
+  initPerson(){
+
+    this.person = new Person();
   }
 
   ngOnInit() {

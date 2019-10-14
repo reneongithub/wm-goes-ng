@@ -17,6 +17,7 @@ import { MatNativeDateModule } from '@angular/material';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RbacService } from './services/rbac.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PersonformComponent } from './personform/personform.component';
 
 
 
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     DatabindingComponent,
     HeaderComponent,
     FooterComponent,
-    NavigationComponent
+    NavigationComponent,
+    PersonformComponent
   ],
   imports: [
     BrowserModule,

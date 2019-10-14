@@ -1,0 +1,49 @@
+
+
+<div class="smp_subsect_hor">
+    <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
+        <mat-label>first name</mat-label>
+        <input required matInput [(ngModel)]="person.firstName">
+        <mat-hint align="end">min 5 characters</mat-hint>
+    </mat-form-field>
+</div>
+
+<div class="smp_subsect_hor">
+    <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
+        <mat-label>last name</mat-label>
+        <input required matInput [(ngModel)]="person.lastName">
+        <mat-hint align="end">min 5 characters</mat-hint>
+    </mat-form-field>
+</div>
+
+<div class="smp_subsect_hor">
+    <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
+        <mat-label>city</mat-label>
+        <input required matInput [(ngModel)]="person.city">
+        <mat-hint align="end">min 5 characters</mat-hint>
+    </mat-form-field>
+</div>
+
+<div class="smp_subsect_hor">
+    <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
+        <mat-label>street</mat-label>
+        <input required matInput [(ngModel)]="person.street">
+        <mat-hint align="end">min 5 characters</mat-hint>
+    </mat-form-field>
+</div>
+
+<div class="smp_subsect_hor">
+    <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
+        <mat-label>phone</mat-label>
+        <input required matInput [(ngModel)]="person.phone">
+        <mat-hint align="end">min 5 characters</mat-hint>
+    </mat-form-field>
+</div>
+
+
+<!-- button for login function -->
+<div class="smp_subsect_hor">
+    <div class="single_it">
+        <button mat-raised-button (click)="login()">save</button>
+    </div>
+</div>
