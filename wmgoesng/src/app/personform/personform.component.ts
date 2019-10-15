@@ -11,6 +11,8 @@ export class PersonformComponent implements OnInit {
 
   @Input('person')person: Person;
 
+  @Input('saveBtnVisible')saveBtnVisible: boolean;
+
   constructor(private _bottomSheet: MatBottomSheet) { }
 
   ngOnInit() {

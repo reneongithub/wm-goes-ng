@@ -3,20 +3,33 @@
         <h5 class="card-title">Lets create a member object with an inner person object</h5>
 
 
-        <mat-form-field>
+        <!-- <mat-form-field>
             <input matInput [matDatepicker]="picker2" placeholder="Mitglied seit">
             <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
             <mat-datepicker #picker2></mat-datepicker>
-        </mat-form-field>
+        </mat-form-field> -->
 
 
         <!-- inpit for username -->
         <div class="smp_subsect_hor">
-            <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
-                <mat-label>Vereine id</mat-label>
-                <input required matInput>
-                <mat-hint align="end">nur nummern</mat-hint>
-            </mat-form-field>
+
+            <div class="single_it" style="width: 100%">
+                <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
+                    <mat-label>Vereine id</mat-label>
+                    <input required matInput>
+                    <mat-hint align="end">nur nummern</mat-hint>
+                </mat-form-field>
+            </div>
+
+
+            <div class="single_it" style="width: 100%">
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker2" placeholder="Mitglied seit">
+                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+                </mat-form-field>
+            </div>
+
         </div>
 
 
@@ -25,7 +38,7 @@
             <div class="single_it">
                 <button mat-raised-button (click)="toggleForm()">create new person</button>
             </div>
-            <div *ngIf="!personFormVisible" class="single_it">
+            <div *ngIf="!personFormVisible" class="single_it" style="width: 100%">
                 <mat-form-field >
                     <mat-select required>
                         <mat-option>-- None --</mat-option>
@@ -47,6 +60,11 @@
         <app-personform *ngIf="personFormVisible" [person]="person"></app-personform>
 
 
+        <div class="smp_subsect_hor">
+            <div class="single_it">
+                <button mat-raised-button (click)="saveMember()">save member data</button>
+            </div>
+        </div>
         
     </div>
 </div>

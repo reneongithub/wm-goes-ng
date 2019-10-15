@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from 'src/app/services/person.model';
+import { MatBottomSheet, MatBottomSheetRef } from '@angular/material';
 
 @Component({
   selector: 'app-goodies',
@@ -12,7 +13,7 @@ export class GoodiesComponent implements OnInit {
 
   person: Person;
 
-  constructor() {
+  constructor(private _bottomSheet: MatBottomSheet) {
 
     this.personFormVisible = false;
 
@@ -32,6 +33,36 @@ export class GoodiesComponent implements OnInit {
 
   public toggleForm(){
     this.personFormVisible = !this.personFormVisible;
+  }
+
+
+
+
+  saveMember(): void
+  {
+    this.person.firstName = null;
+    this.person.lastName = null;
+
+    this.person.city = null;
+    this.person.street = null;
+    this.person.phone = null;
+
+    this._bottomSheet.open(BottomSheetOverviewMemberSheet);
+  }
+
+}
+
+@Component({
+  selector: 'bottom-sheet-overview-goodie-sheet',
+  templateUrl: 'bottom-sheet-overview-goodie-sheet.html',
+})
+export class BottomSheetOverviewMemberSheet {
+
+  bottomSheetRef: MatBottomSheetRef<BottomSheetOverviewMemberSheet>;
+
+  constructor(bottomSheetRef: MatBottomSheetRef<BottomSheetOverviewMemberSheet>) {
+
+    this.bottomSheetRef = bottomSheetRef;
   }
 
 }

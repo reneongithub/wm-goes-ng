@@ -28,6 +28,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FormsModule } from '@angular/forms';
 import { BottomSheetOverviewExampleSheet } from '../personform/personform.component';
+import { BottomSheetOverviewMemberSheet } from '../subcomponents/goodies/goodies.component';
 
 const MaterialComponents = [
   MatButtonModule,
@@ -60,10 +61,12 @@ const MaterialComponents = [
 
 @NgModule({
   declarations: [
-    BottomSheetOverviewExampleSheet
+    BottomSheetOverviewExampleSheet,
+    BottomSheetOverviewMemberSheet
   ],
   entryComponents: [
-    BottomSheetOverviewExampleSheet
+    BottomSheetOverviewExampleSheet,
+    BottomSheetOverviewMemberSheet
   ],
   imports: [MaterialComponents],
   exports: [MaterialComponents]

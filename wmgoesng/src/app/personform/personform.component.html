@@ -42,8 +42,8 @@
 
 
 <!-- button for login function -->
-<div class="smp_subsect_hor">
+<div *ngIf="saveBtnVisible" class="smp_subsect_hor">
     <div class="single_it">
-        <button mat-raised-button (click)="savePerson()">save</button>
+        <button mat-raised-button (click)="savePerson()">save person data</button>
     </div>
 </div>
