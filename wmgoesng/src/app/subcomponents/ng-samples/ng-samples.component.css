@@ -23,15 +23,6 @@
 
 
 
-/* navigation */
-
-.navbar{
-    justify-content: space-between;
-}
-.navbar span{
-    padding-right: 1rem;
-}
-
 mat-sidenav-container{
 
     height: 100%;
@@ -74,36 +65,36 @@ mat-form-field {
     margin-right: 12px;
 }
 .example-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .example-container > * {
-    width: 100%;
-  }
-  
-  .example-container form {
-    margin-bottom: 20px;
-  }
-  
-  .example-container form > * {
-    margin: 5px 0;
-  }
-  
-  .example-container .mat-radio-button {
-    margin: 0 12px;
-  }
+  display: flex;
+  flex-direction: column;
+}
 
-  /* table */
-  table {
-    width: 100%;
-  }
-  
-  .mat-form-field {
-    font-size: 14px;
-    width: 100%;
-  }
-  
-  td, th {
-    width: 25%;
-  }
+.example-container > * {
+  width: 100%;
+}
+
+.example-container form {
+  margin-bottom: 20px;
+}
+
+.example-container form > * {
+  margin: 5px 0;
+}
+
+.example-container .mat-radio-button {
+  margin: 0 12px;
+}
+
+/* table */
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
+}

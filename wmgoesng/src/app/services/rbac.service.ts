@@ -5,8 +5,8 @@ import { Result } from './service.result.model';
 @Injectable()
 export class RbacService {
 
-  private rbacServHostUrl: string = "http://ivy5dev.lsb-sachsen-anhalt.de:8182";
-  // private rbacServHostUrl: string = "http://localhost:8182";
+  // private rbacServHostUrl: string = "http://ivy5dev.lsb-sachsen-anhalt.de:8182";
+  private rbacServHostUrl: string = "http://localhost:8182";
   private rbacServLoginResource: string = "activity/login";
 
   private httpServ: HttpClient;
@@ -23,11 +23,11 @@ export class RbacService {
     tmpReqUrl += "?namemail="+username;
     tmpReqUrl += "&pass="+pass;
 
-    // console.log(tmpReqUrl);
+    console.log(tmpReqUrl);
 
 
     this.httpServ.get(tmpReqUrl).subscribe( (rsp?) => {
-
+      console.log("dfbdghdbnnnnn");
       if(rsp['hasErrors'] === undefined){
         cb(new Result(true, new Array("request failed"), null));
         return;

@@ -16,7 +16,7 @@ export class PersonformComponent implements OnInit {
   constructor(private _bottomSheet: MatBottomSheet) { }
 
   ngOnInit() {
-    console.log(this.person);
+    // console.log(this.person);
   }
 
   openBottomSheet(): void {
