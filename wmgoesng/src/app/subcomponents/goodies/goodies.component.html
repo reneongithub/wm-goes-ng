@@ -1,0 +1,53 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Lets create a member object with an inner person object</h5>
+
+
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker2" placeholder="Mitglied seit">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+
+
+        <!-- inpit for username -->
+        <div class="smp_subsect_hor">
+            <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
+                <mat-label>Vereine id</mat-label>
+                <input required matInput>
+                <mat-hint align="end">nur nummern</mat-hint>
+            </mat-form-field>
+        </div>
+
+
+        <!-- button for login function -->
+        <div class="smp_subsect_hor" style="flex-direction: row-reverse">
+            <div class="single_it">
+                <button mat-raised-button (click)="toggleForm()">create new person</button>
+            </div>
+            <div *ngIf="!personFormVisible" class="single_it">
+                <mat-form-field >
+                    <mat-select required>
+                        <mat-option>-- None --</mat-option>
+                        <mat-option value="1">Person 1</mat-option>
+                        <mat-option value="2">Person 2</mat-option>
+                        <mat-option value="3">Person 3</mat-option>
+                        <mat-option value="4">Person 4</mat-option>
+                        <mat-option value="5">Person 5</mat-option>
+                        <mat-option value="6">Person 6</mat-option>
+                        <mat-option value="7">Person 7</mat-option>
+                        <mat-option value="8">Person 8</mat-option>
+                    </mat-select>
+                    <mat-label><mat-icon>person_add</mat-icon> <b> Person</b> <i> select</i></mat-label>
+                </mat-form-field>
+            </div>
+        </div>
+
+
+        <app-personform *ngIf="personFormVisible" [person]="person"></app-personform>
+
+
+        
+    </div>
+</div>
+

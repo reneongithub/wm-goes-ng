@@ -5,6 +5,7 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { RbacComponent } from './subcomponents/rbac/rbac.component';
 import { NgSamplesComponent } from './subcomponents/ng-samples/ng-samples.component';
 import { DatabindingComponent } from './subcomponents/databinding/databinding.component';
+import { GoodiesComponent } from './subcomponents/goodies/goodies.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'rbac', component: RbacComponent},
   {path: 'ngsamples', component: NgSamplesComponent},
   {path: 'databinding', component: DatabindingComponent},
+  {path: 'goodies', component: GoodiesComponent},
   /* samplecode for sub routing */
   // {
   //   path: 'topcomp', 

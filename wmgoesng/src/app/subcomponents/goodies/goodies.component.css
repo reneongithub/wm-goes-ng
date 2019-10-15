@@ -1,0 +1,40 @@
+.smp_sect{
+
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f0ff;
+    border-radius: 10px;
+
+}
+.smp_subsect_hor{
+
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.single_it{
+    margin: 10px 30px;
+}
+
+
+/* override some bootstarp rools for card */
+.card{
+    background-color: #f2f0ff;
+    margin: 10px 10px;
+}
+
+mat-form-field {
+    margin-right: 12px;
+}
+  
+  
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+  

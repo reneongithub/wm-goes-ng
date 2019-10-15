@@ -34,5 +34,6 @@ const routList = [
   {name: "HOME", rout: "home"},
   {name: "SAMPLES", rout: "ngsamples"},
   {name: "DATA-BINDING", rout: "databinding"},
-  {name: "RBAC-LIVE", rout: "rbac"}
+  {name: "RBAC-LIVE", rout: "rbac"},
+  {name: "GOODIES", rout: "goodies"}
 ]

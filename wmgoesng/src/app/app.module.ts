@@ -18,6 +18,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RbacService } from './services/rbac.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PersonformComponent } from './personform/personform.component';
+import { GoodiesComponent } from './subcomponents/goodies/goodies.component';
 
 
 
@@ -32,7 +33,8 @@ import { PersonformComponent } from './personform/personform.component';
     HeaderComponent,
     FooterComponent,
     NavigationComponent,
-    PersonformComponent
+    PersonformComponent,
+    GoodiesComponent
   ],
   imports: [
     BrowserModule,
